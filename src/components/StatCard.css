@@ -1,0 +1,45 @@
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #003366;
+}
+
+.stat-title {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.25rem;
+}
+
+.stat-subtitle {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.stat-trend {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.trend-up {
+  color: #2e7d32;
+}
+
+.trend-down {
+  color: #c62828;
+}
+
+.trend-neutral {
+  color: #666;
+}

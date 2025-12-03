@@ -1,0 +1,2209 @@
+{
+  "availableTerms": [
+    {
+      "code": "2257",
+      "label": "Fall 2025"
+    },
+    {
+      "code": "2247",
+      "label": "Fall 2024"
+    },
+    {
+      "code": "2237",
+      "label": "Fall 2023"
+    }
+  ],
+  "termSummaries": [
+    {
+      "term": "2237",
+      "totalSections": 125,
+      "totalEnrollment": 2827,
+      "avgClassSize": 22.6,
+      "inPersonPercent": 52.8,
+      "blendedPercent": 47.2
+    },
+    {
+      "term": "2247",
+      "totalSections": 140,
+      "totalEnrollment": 3018,
+      "avgClassSize": 21.6,
+      "inPersonPercent": 55,
+      "blendedPercent": 45
+    },
+    {
+      "term": "2257",
+      "totalSections": 131,
+      "totalEnrollment": 3028,
+      "avgClassSize": 23.1,
+      "inPersonPercent": 46.6,
+      "blendedPercent": 53.4
+    }
+  ],
+  "departmentSummaries": [
+    {
+      "department": "Architecture",
+      "totalRooms": 5,
+      "totalCapacity": 50,
+      "totalSections": 146,
+      "avgUtilization": 78.4
+    },
+    {
+      "department": "Engineering",
+      "totalRooms": 4,
+      "totalCapacity": 46,
+      "totalSections": 83,
+      "avgUtilization": 92
+    },
+    {
+      "department": "General",
+      "totalRooms": 9,
+      "totalCapacity": 30,
+      "totalSections": 19,
+      "avgUtilization": 80.4
+    },
+    {
+      "department": "Technology",
+      "totalRooms": 12,
+      "totalCapacity": 183,
+      "totalSections": 142,
+      "avgUtilization": 79.3
+    }
+  ],
+  "roomUtilizationAll": [
+    {
+      "facilityId": "4101",
+      "department": "Architecture",
+      "capacity": 20,
+      "designation": "Drafting tables",
+      "totalSections": 28,
+      "avgEnrollment": 13.4,
+      "utilizationRate": 66.8
+    },
+    {
+      "facilityId": "4107",
+      "department": "Architecture",
+      "capacity": 20,
+      "designation": "Drafting tables",
+      "totalSections": 34,
+      "avgEnrollment": 17,
+      "utilizationRate": 85
+    },
+    {
+      "facilityId": "4108",
+      "department": "Architecture",
+      "capacity": 20,
+      "designation": "Drafting tables",
+      "totalSections": 28,
+      "avgEnrollment": 15.7,
+      "utilizationRate": 78.6
+    },
+    {
+      "facilityId": "6301",
+      "department": "Architecture",
+      "capacity": 30,
+      "designation": "Drafting tables with computers",
+      "totalSections": 16,
+      "avgEnrollment": 23.1,
+      "utilizationRate": 77.1
+    },
+    {
+      "facilityId": "6360",
+      "department": "Architecture",
+      "capacity": 20,
+      "designation": "Drafting tables",
+      "totalSections": 40,
+      "avgEnrollment": 16.3,
+      "utilizationRate": 81.3
+    },
+    {
+      "facilityId": "6302",
+      "department": "Engineering",
+      "capacity": 24,
+      "designation": "Engineering CAD Lab",
+      "totalSections": 18,
+      "avgEnrollment": 20.4,
+      "utilizationRate": 85.2
+    },
+    {
+      "facilityId": "6315",
+      "department": "Engineering",
+      "capacity": 24,
+      "designation": "Engineering Computers",
+      "totalSections": 31,
+      "avgEnrollment": 21.8,
+      "utilizationRate": 90.7
+    },
+    {
+      "facilityId": "6317",
+      "department": "Engineering",
+      "capacity": 24,
+      "designation": "Engineering Computers",
+      "totalSections": 20,
+      "avgEnrollment": 24.8,
+      "utilizationRate": 103.1
+    },
+    {
+      "facilityId": "6359",
+      "department": "Engineering",
+      "capacity": 22,
+      "designation": "Engineering Computers",
+      "totalSections": 14,
+      "avgEnrollment": 19.3,
+      "utilizationRate": 87.7
+    },
+    {
+      "facilityId": "2111",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 1,
+      "avgEnrollment": 57,
+      "utilizationRate": 190
+    },
+    {
+      "facilityId": "6212",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 1,
+      "avgEnrollment": 42,
+      "utilizationRate": 140
+    },
+    {
+      "facilityId": "6217",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 2,
+      "avgEnrollment": 23,
+      "utilizationRate": 76.7
+    },
+    {
+      "facilityId": "6246",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 2,
+      "avgEnrollment": 24.5,
+      "utilizationRate": 81.7
+    },
+    {
+      "facilityId": "9103",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 2,
+      "avgEnrollment": 21.5,
+      "utilizationRate": 71.7
+    },
+    {
+      "facilityId": "M232",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 2,
+      "avgEnrollment": 21,
+      "utilizationRate": 70
+    },
+    {
+      "facilityId": "M238",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 3,
+      "avgEnrollment": 19.7,
+      "utilizationRate": 65.6
+    },
+    {
+      "facilityId": "N108",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 4,
+      "avgEnrollment": 17.5,
+      "utilizationRate": 58.3
+    },
+    {
+      "facilityId": "R251",
+      "department": "General",
+      "capacity": 30,
+      "designation": "Classroom",
+      "totalSections": 2,
+      "avgEnrollment": 25,
+      "utilizationRate": 83.3
+    },
+    {
+      "facilityId": "2128",
+      "department": "Technology",
+      "capacity": 20,
+      "designation": "Computer Classroom",
+      "totalSections": 8,
+      "avgEnrollment": 14.9,
+      "utilizationRate": 74.4
+    },
+    {
+      "facilityId": "2129",
+      "department": "Technology",
+      "capacity": 20,
+      "designation": "Computer Classroom",
+      "totalSections": 3,
+      "avgEnrollment": 16.3,
+      "utilizationRate": 81.7
+    },
+    {
+      "facilityId": "2130",
+      "department": "Technology",
+      "capacity": 40,
+      "designation": "Computer Classroom",
+      "totalSections": 22,
+      "avgEnrollment": 32.2,
+      "utilizationRate": 80.6
+    },
+    {
+      "facilityId": "2132",
+      "department": "Technology",
+      "capacity": 40,
+      "designation": "Computer Classroom",
+      "totalSections": 14,
+      "avgEnrollment": 35,
+      "utilizationRate": 87.5
+    },
+    {
+      "facilityId": "2133",
+      "department": "Technology",
+      "capacity": 40,
+      "designation": "Computer Classroom",
+      "totalSections": 20,
+      "avgEnrollment": 33.4,
+      "utilizationRate": 83.4
+    },
+    {
+      "facilityId": "2134",
+      "department": "Technology",
+      "capacity": 20,
+      "designation": "Computer Classroom",
+      "totalSections": 4,
+      "avgEnrollment": 18.3,
+      "utilizationRate": 91.3
+    },
+    {
+      "facilityId": "2135",
+      "department": "Technology",
+      "capacity": 45,
+      "designation": "Computer Classroom",
+      "totalSections": 28,
+      "avgEnrollment": 37,
+      "utilizationRate": 82.3
+    },
+    {
+      "facilityId": "6332",
+      "department": "Technology",
+      "capacity": 30,
+      "designation": "Apple Classroom with iMacs",
+      "totalSections": 4,
+      "avgEnrollment": 25.3,
+      "utilizationRate": 84.2
+    },
+    {
+      "facilityId": "6348",
+      "department": "Technology",
+      "capacity": 20,
+      "designation": "Computer Classroom",
+      "totalSections": 0,
+      "avgEnrollment": null,
+      "utilizationRate": null
+    },
+    {
+      "facilityId": "6355",
+      "department": "Technology",
+      "capacity": 40,
+      "designation": "Computer Classroom",
+      "totalSections": 14,
+      "avgEnrollment": 24.7,
+      "utilizationRate": 61.8
+    },
+    {
+      "facilityId": "8216",
+      "department": "Technology",
+      "capacity": 26,
+      "designation": "Networking classroom (with racks)",
+      "totalSections": 21,
+      "avgEnrollment": 19.3,
+      "utilizationRate": 74.4
+    },
+    {
+      "facilityId": "8217",
+      "department": "Technology",
+      "capacity": 22,
+      "designation": "Computer Classroom",
+      "totalSections": 4,
+      "avgEnrollment": 17.5,
+      "utilizationRate": 79.5
+    }
+  ],
+  "roomUtilizationByTerm": {
+    "2237": [
+      {
+        "facilityId": "4101",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 8,
+        "avgEnrollment": 12.8,
+        "utilizationRate": 63.8
+      },
+      {
+        "facilityId": "4107",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 14,
+        "avgEnrollment": 17.9,
+        "utilizationRate": 89.3
+      },
+      {
+        "facilityId": "4108",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 8,
+        "avgEnrollment": 14.5,
+        "utilizationRate": 72.5
+      },
+      {
+        "facilityId": "6301",
+        "department": "Architecture",
+        "capacity": 30,
+        "designation": "Drafting tables with computers",
+        "totalSections": 2,
+        "avgEnrollment": 19,
+        "utilizationRate": 63.3
+      },
+      {
+        "facilityId": "6360",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 14,
+        "avgEnrollment": 17.4,
+        "utilizationRate": 87.1
+      },
+      {
+        "facilityId": "6302",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering CAD Lab",
+        "totalSections": 6,
+        "avgEnrollment": 21,
+        "utilizationRate": 87.5
+      },
+      {
+        "facilityId": "6315",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 12,
+        "avgEnrollment": 21.8,
+        "utilizationRate": 91
+      },
+      {
+        "facilityId": "6317",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 8,
+        "avgEnrollment": 22.9,
+        "utilizationRate": 95.3
+      },
+      {
+        "facilityId": "6359",
+        "department": "Engineering",
+        "capacity": 22,
+        "designation": "Engineering Computers",
+        "totalSections": 2,
+        "avgEnrollment": 23,
+        "utilizationRate": 104.5
+      },
+      {
+        "facilityId": "2111",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6212",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6217",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6246",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "9103",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 21.5,
+        "utilizationRate": 71.7
+      },
+      {
+        "facilityId": "M232",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "M238",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 17,
+        "utilizationRate": 56.7
+      },
+      {
+        "facilityId": "N108",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "R251",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "2128",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 5,
+        "avgEnrollment": 14.6,
+        "utilizationRate": 73
+      },
+      {
+        "facilityId": "2129",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "2130",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 8,
+        "avgEnrollment": 32.9,
+        "utilizationRate": 82.2
+      },
+      {
+        "facilityId": "2132",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 5,
+        "avgEnrollment": 33.2,
+        "utilizationRate": 83
+      },
+      {
+        "facilityId": "2133",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 11,
+        "avgEnrollment": 32.8,
+        "utilizationRate": 82
+      },
+      {
+        "facilityId": "2134",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 19,
+        "utilizationRate": 95
+      },
+      {
+        "facilityId": "2135",
+        "department": "Technology",
+        "capacity": 45,
+        "designation": "Computer Classroom",
+        "totalSections": 9,
+        "avgEnrollment": 36.7,
+        "utilizationRate": 81.5
+      },
+      {
+        "facilityId": "6332",
+        "department": "Technology",
+        "capacity": 30,
+        "designation": "Apple Classroom with iMacs",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6348",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6355",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "8216",
+        "department": "Technology",
+        "capacity": 26,
+        "designation": "Networking classroom (with racks)",
+        "totalSections": 5,
+        "avgEnrollment": 20.6,
+        "utilizationRate": 79.2
+      },
+      {
+        "facilityId": "8217",
+        "department": "Technology",
+        "capacity": 22,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      }
+    ],
+    "2247": [
+      {
+        "facilityId": "4101",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 8,
+        "avgEnrollment": 13,
+        "utilizationRate": 65
+      },
+      {
+        "facilityId": "4107",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 10,
+        "avgEnrollment": 17.4,
+        "utilizationRate": 87
+      },
+      {
+        "facilityId": "4108",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 14,
+        "avgEnrollment": 16.6,
+        "utilizationRate": 82.9
+      },
+      {
+        "facilityId": "6301",
+        "department": "Architecture",
+        "capacity": 30,
+        "designation": "Drafting tables with computers",
+        "totalSections": 4,
+        "avgEnrollment": 17,
+        "utilizationRate": 56.7
+      },
+      {
+        "facilityId": "6360",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 16,
+        "avgEnrollment": 16.1,
+        "utilizationRate": 80.6
+      },
+      {
+        "facilityId": "6302",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering CAD Lab",
+        "totalSections": 10,
+        "avgEnrollment": 20,
+        "utilizationRate": 83.3
+      },
+      {
+        "facilityId": "6315",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 8,
+        "avgEnrollment": 19.8,
+        "utilizationRate": 82.3
+      },
+      {
+        "facilityId": "6317",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 6,
+        "avgEnrollment": 26,
+        "utilizationRate": 108.3
+      },
+      {
+        "facilityId": "6359",
+        "department": "Engineering",
+        "capacity": 22,
+        "designation": "Engineering Computers",
+        "totalSections": 6,
+        "avgEnrollment": 18.3,
+        "utilizationRate": 83.3
+      },
+      {
+        "facilityId": "2111",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6212",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6217",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6246",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 24.5,
+        "utilizationRate": 81.7
+      },
+      {
+        "facilityId": "9103",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "M232",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 21,
+        "utilizationRate": 70
+      },
+      {
+        "facilityId": "M238",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 25,
+        "utilizationRate": 83.3
+      },
+      {
+        "facilityId": "N108",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 16,
+        "utilizationRate": 53.3
+      },
+      {
+        "facilityId": "R251",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "2128",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 15,
+        "utilizationRate": 75
+      },
+      {
+        "facilityId": "2129",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 3,
+        "avgEnrollment": 16.3,
+        "utilizationRate": 81.7
+      },
+      {
+        "facilityId": "2130",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 6,
+        "avgEnrollment": 33.5,
+        "utilizationRate": 83.8
+      },
+      {
+        "facilityId": "2132",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 5,
+        "avgEnrollment": 37.4,
+        "utilizationRate": 93.5
+      },
+      {
+        "facilityId": "2133",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 4,
+        "avgEnrollment": 33.5,
+        "utilizationRate": 83.8
+      },
+      {
+        "facilityId": "2134",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 18,
+        "utilizationRate": 90
+      },
+      {
+        "facilityId": "2135",
+        "department": "Technology",
+        "capacity": 45,
+        "designation": "Computer Classroom",
+        "totalSections": 8,
+        "avgEnrollment": 36.1,
+        "utilizationRate": 80.3
+      },
+      {
+        "facilityId": "6332",
+        "department": "Technology",
+        "capacity": 30,
+        "designation": "Apple Classroom with iMacs",
+        "totalSections": 2,
+        "avgEnrollment": 22.5,
+        "utilizationRate": 75
+      },
+      {
+        "facilityId": "6348",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6355",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 8,
+        "avgEnrollment": 28.1,
+        "utilizationRate": 70.3
+      },
+      {
+        "facilityId": "8216",
+        "department": "Technology",
+        "capacity": 26,
+        "designation": "Networking classroom (with racks)",
+        "totalSections": 8,
+        "avgEnrollment": 19.1,
+        "utilizationRate": 73.6
+      },
+      {
+        "facilityId": "8217",
+        "department": "Technology",
+        "capacity": 22,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      }
+    ],
+    "2257": [
+      {
+        "facilityId": "4101",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 12,
+        "avgEnrollment": 14,
+        "utilizationRate": 70
+      },
+      {
+        "facilityId": "4107",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 10,
+        "avgEnrollment": 15.4,
+        "utilizationRate": 77
+      },
+      {
+        "facilityId": "4108",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 6,
+        "avgEnrollment": 15.3,
+        "utilizationRate": 76.7
+      },
+      {
+        "facilityId": "6301",
+        "department": "Architecture",
+        "capacity": 30,
+        "designation": "Drafting tables with computers",
+        "totalSections": 10,
+        "avgEnrollment": 26.4,
+        "utilizationRate": 88
+      },
+      {
+        "facilityId": "6360",
+        "department": "Architecture",
+        "capacity": 20,
+        "designation": "Drafting tables",
+        "totalSections": 10,
+        "avgEnrollment": 14.8,
+        "utilizationRate": 74
+      },
+      {
+        "facilityId": "6302",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering CAD Lab",
+        "totalSections": 2,
+        "avgEnrollment": 21,
+        "utilizationRate": 87.5
+      },
+      {
+        "facilityId": "6315",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 11,
+        "avgEnrollment": 23.2,
+        "utilizationRate": 96.6
+      },
+      {
+        "facilityId": "6317",
+        "department": "Engineering",
+        "capacity": 24,
+        "designation": "Engineering Computers",
+        "totalSections": 6,
+        "avgEnrollment": 26,
+        "utilizationRate": 108.3
+      },
+      {
+        "facilityId": "6359",
+        "department": "Engineering",
+        "capacity": 22,
+        "designation": "Engineering Computers",
+        "totalSections": 6,
+        "avgEnrollment": 19,
+        "utilizationRate": 86.4
+      },
+      {
+        "facilityId": "2111",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 57,
+        "utilizationRate": 190
+      },
+      {
+        "facilityId": "6212",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 42,
+        "utilizationRate": 140
+      },
+      {
+        "facilityId": "6217",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 23,
+        "utilizationRate": 76.7
+      },
+      {
+        "facilityId": "6246",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "9103",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "M232",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "M238",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "N108",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 19,
+        "utilizationRate": 63.3
+      },
+      {
+        "facilityId": "R251",
+        "department": "General",
+        "capacity": 30,
+        "designation": "Classroom",
+        "totalSections": 2,
+        "avgEnrollment": 25,
+        "utilizationRate": 83.3
+      },
+      {
+        "facilityId": "2128",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 16,
+        "utilizationRate": 80
+      },
+      {
+        "facilityId": "2129",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "2130",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 8,
+        "avgEnrollment": 30.6,
+        "utilizationRate": 76.6
+      },
+      {
+        "facilityId": "2132",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 4,
+        "avgEnrollment": 34.3,
+        "utilizationRate": 85.6
+      },
+      {
+        "facilityId": "2133",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 5,
+        "avgEnrollment": 34.4,
+        "utilizationRate": 86
+      },
+      {
+        "facilityId": "2134",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 1,
+        "avgEnrollment": 17,
+        "utilizationRate": 85
+      },
+      {
+        "facilityId": "2135",
+        "department": "Technology",
+        "capacity": 45,
+        "designation": "Computer Classroom",
+        "totalSections": 11,
+        "avgEnrollment": 38,
+        "utilizationRate": 84.4
+      },
+      {
+        "facilityId": "6332",
+        "department": "Technology",
+        "capacity": 30,
+        "designation": "Apple Classroom with iMacs",
+        "totalSections": 2,
+        "avgEnrollment": 28,
+        "utilizationRate": 93.3
+      },
+      {
+        "facilityId": "6348",
+        "department": "Technology",
+        "capacity": 20,
+        "designation": "Computer Classroom",
+        "totalSections": 0,
+        "avgEnrollment": null,
+        "utilizationRate": null
+      },
+      {
+        "facilityId": "6355",
+        "department": "Technology",
+        "capacity": 40,
+        "designation": "Computer Classroom",
+        "totalSections": 6,
+        "avgEnrollment": 20.2,
+        "utilizationRate": 50.4
+      },
+      {
+        "facilityId": "8216",
+        "department": "Technology",
+        "capacity": 26,
+        "designation": "Networking classroom (with racks)",
+        "totalSections": 8,
+        "avgEnrollment": 18.8,
+        "utilizationRate": 72.1
+      },
+      {
+        "facilityId": "8217",
+        "department": "Technology",
+        "capacity": 22,
+        "designation": "Computer Classroom",
+        "totalSections": 4,
+        "avgEnrollment": 17.5,
+        "utilizationRate": 79.5
+      }
+    ]
+  },
+  "coursesByDepartment": [
+    {
+      "department": "Architecture",
+      "course": "ARC 1301",
+      "sectionCount": 36,
+      "totalEnrollment": 520
+    },
+    {
+      "department": "Architecture",
+      "course": "ARC 1115",
+      "sectionCount": 32,
+      "totalEnrollment": 548
+    },
+    {
+      "department": "Architecture",
+      "course": "ARC 1126C",
+      "sectionCount": 28,
+      "totalEnrollment": 488
+    },
+    {
+      "department": "Architecture",
+      "course": "ARC 2303",
+      "sectionCount": 26,
+      "totalEnrollment": 378
+    },
+    {
+      "department": "Architecture",
+      "course": "ARC 2461",
+      "sectionCount": 6,
+      "totalEnrollment": 136
+    },
+    {
+      "department": "Architecture",
+      "course": "EGN 1008C",
+      "sectionCount": 6,
+      "totalEnrollment": 160
+    },
+    {
+      "department": "Architecture",
+      "course": "IND 1020",
+      "sectionCount": 6,
+      "totalEnrollment": 82
+    },
+    {
+      "department": "Architecture",
+      "course": "IND 2210",
+      "sectionCount": 4,
+      "totalEnrollment": 62
+    },
+    {
+      "department": "Architecture",
+      "course": "ARC 2171",
+      "sectionCount": 2,
+      "totalEnrollment": 38
+    },
+    {
+      "department": "Engineering",
+      "course": "COP 2270",
+      "sectionCount": 12,
+      "totalEnrollment": 268
+    },
+    {
+      "department": "Engineering",
+      "course": "EGN 1008C",
+      "sectionCount": 12,
+      "totalEnrollment": 266
+    },
+    {
+      "department": "Engineering",
+      "course": "CET 2113C",
+      "sectionCount": 6,
+      "totalEnrollment": 181
+    },
+    {
+      "department": "Engineering",
+      "course": "CET 3126C",
+      "sectionCount": 6,
+      "totalEnrollment": 138
+    },
+    {
+      "department": "Engineering",
+      "course": "EET 1015C",
+      "sectionCount": 6,
+      "totalEnrollment": 152
+    },
+    {
+      "department": "Engineering",
+      "course": "EET 1141C",
+      "sectionCount": 6,
+      "totalEnrollment": 173
+    },
+    {
+      "department": "Engineering",
+      "course": "EET 4158C",
+      "sectionCount": 6,
+      "totalEnrollment": 90
+    },
+    {
+      "department": "Engineering",
+      "course": "EET 4165C",
+      "sectionCount": 6,
+      "totalEnrollment": 94
+    },
+    {
+      "department": "Engineering",
+      "course": "EET 4732C",
+      "sectionCount": 6,
+      "totalEnrollment": 94
+    },
+    {
+      "department": "Engineering",
+      "course": "EGN 2200",
+      "sectionCount": 6,
+      "totalEnrollment": 96
+    },
+    {
+      "department": "Engineering",
+      "course": "ETS 2673C",
+      "sectionCount": 6,
+      "totalEnrollment": 161
+    },
+    {
+      "department": "Engineering",
+      "course": "ARC 1126C",
+      "sectionCount": 2,
+      "totalEnrollment": 42
+    },
+    {
+      "department": "Engineering",
+      "course": "ARC 2461",
+      "sectionCount": 2,
+      "totalEnrollment": 38
+    },
+    {
+      "department": "Engineering",
+      "course": "ETP 3320",
+      "sectionCount": 1,
+      "totalEnrollment": 15
+    },
+    {
+      "department": "General",
+      "course": "ARC 2580",
+      "sectionCount": 6,
+      "totalEnrollment": 122
+    },
+    {
+      "department": "General",
+      "course": "ARC 2461",
+      "sectionCount": 4,
+      "totalEnrollment": 70
+    },
+    {
+      "department": "General",
+      "course": "ARC 1115",
+      "sectionCount": 2,
+      "totalEnrollment": 50
+    },
+    {
+      "department": "General",
+      "course": "ARC 2701",
+      "sectionCount": 2,
+      "totalEnrollment": 86
+    },
+    {
+      "department": "General",
+      "course": "ARC 2702",
+      "sectionCount": 2,
+      "totalEnrollment": 62
+    },
+    {
+      "department": "General",
+      "course": "COP 2654",
+      "sectionCount": 1,
+      "totalEnrollment": 24
+    },
+    {
+      "department": "General",
+      "course": "COP 2658",
+      "sectionCount": 1,
+      "totalEnrollment": 19
+    },
+    {
+      "department": "General",
+      "course": "IND 1100",
+      "sectionCount": 1,
+      "totalEnrollment": 25
+    },
+    {
+      "department": "Technology",
+      "course": "CGS 1060C",
+      "sectionCount": 81,
+      "totalEnrollment": 2715
+    },
+    {
+      "department": "Technology",
+      "course": "COP 1334",
+      "sectionCount": 9,
+      "totalEnrollment": 298
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1134",
+      "sectionCount": 8,
+      "totalEnrollment": 205
+    },
+    {
+      "department": "Technology",
+      "course": "CAP 1788",
+      "sectionCount": 5,
+      "totalEnrollment": 75
+    },
+    {
+      "department": "Technology",
+      "course": "COP 2800",
+      "sectionCount": 4,
+      "totalEnrollment": 131
+    },
+    {
+      "department": "Technology",
+      "course": "CGS 1540C",
+      "sectionCount": 3,
+      "totalEnrollment": 49
+    },
+    {
+      "department": "Technology",
+      "course": "CGS 1560",
+      "sectionCount": 3,
+      "totalEnrollment": 53
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1111",
+      "sectionCount": 3,
+      "totalEnrollment": 63
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1120",
+      "sectionCount": 3,
+      "totalEnrollment": 69
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1131",
+      "sectionCount": 3,
+      "totalEnrollment": 39
+    },
+    {
+      "department": "Technology",
+      "course": "ARC 1115",
+      "sectionCount": 2,
+      "totalEnrollment": 36
+    },
+    {
+      "department": "Technology",
+      "course": "ARC 1126C",
+      "sectionCount": 2,
+      "totalEnrollment": 34
+    },
+    {
+      "department": "Technology",
+      "course": "CAI 2100C",
+      "sectionCount": 2,
+      "totalEnrollment": 26
+    },
+    {
+      "department": "Technology",
+      "course": "COP 2654",
+      "sectionCount": 2,
+      "totalEnrollment": 56
+    },
+    {
+      "department": "Technology",
+      "course": "COP 2658",
+      "sectionCount": 2,
+      "totalEnrollment": 45
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1650",
+      "sectionCount": 2,
+      "totalEnrollment": 30
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1651",
+      "sectionCount": 2,
+      "totalEnrollment": 31
+    },
+    {
+      "department": "Technology",
+      "course": "CAI 1001C",
+      "sectionCount": 1,
+      "totalEnrollment": 12
+    },
+    {
+      "department": "Technology",
+      "course": "CAP 2743C",
+      "sectionCount": 1,
+      "totalEnrollment": 25
+    },
+    {
+      "department": "Technology",
+      "course": "CAP 2791C",
+      "sectionCount": 1,
+      "totalEnrollment": 29
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 1145",
+      "sectionCount": 1,
+      "totalEnrollment": 10
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 2375C",
+      "sectionCount": 1,
+      "totalEnrollment": 17
+    },
+    {
+      "department": "Technology",
+      "course": "CTS 2960",
+      "sectionCount": 1,
+      "totalEnrollment": 19
+    }
+  ],
+  "timeSlotAnalysis": [
+    {
+      "timeSlot": "07:00",
+      "days": "F",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "07:00",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "07:00",
+      "days": "R",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "MW",
+      "sectionCount": 4
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "R",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "S",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "T",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "08:00",
+      "days": "TR",
+      "sectionCount": 5
+    },
+    {
+      "timeSlot": "08:30",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "08:50",
+      "days": "MW",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "08:50",
+      "days": "TR",
+      "sectionCount": 17
+    },
+    {
+      "timeSlot": "08:50",
+      "days": "W",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "09:00",
+      "days": "F",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "09:00",
+      "days": "MW",
+      "sectionCount": 5
+    },
+    {
+      "timeSlot": "09:00",
+      "days": "S",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "09:00",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "09:05",
+      "days": "T",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "09:10",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "09:20",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "09:30",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "09:45",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "09:45",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "09:50",
+      "days": "F",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "09:50",
+      "days": "MW",
+      "sectionCount": 5
+    },
+    {
+      "timeSlot": "09:50",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "10:00",
+      "days": "S",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "10:10",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "10:10",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "10:20",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "10:25",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "10:30",
+      "days": "F",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "10:30",
+      "days": "MWF",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "10:35",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "10:35",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "10:40",
+      "days": "M",
+      "sectionCount": 9
+    },
+    {
+      "timeSlot": "10:40",
+      "days": "MW",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "10:40",
+      "days": "R",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "10:40",
+      "days": "TR",
+      "sectionCount": 17
+    },
+    {
+      "timeSlot": "10:50",
+      "days": "S",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:00",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:00",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:05",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:10",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:15",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:20",
+      "days": "M",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:20",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:25",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:25",
+      "days": "R",
+      "sectionCount": 4
+    },
+    {
+      "timeSlot": "11:25",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:30",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:35",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "11:50",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "11:50",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "12:30",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "12:30",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "12:40",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "12:40",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "12:50",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:00",
+      "days": "MW",
+      "sectionCount": 10
+    },
+    {
+      "timeSlot": "13:00",
+      "days": "R",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:00",
+      "days": "T",
+      "sectionCount": 4
+    },
+    {
+      "timeSlot": "13:00",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "13:00",
+      "days": "W",
+      "sectionCount": 5
+    },
+    {
+      "timeSlot": "13:15",
+      "days": "M",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:15",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:25",
+      "days": "MW",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "13:40",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "13:40",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "13:50",
+      "days": "MW",
+      "sectionCount": 8
+    },
+    {
+      "timeSlot": "13:50",
+      "days": "R",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:50",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "13:50",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "13:50",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "14:05",
+      "days": "T",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "14:05",
+      "days": "W",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "14:20",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "14:30",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "14:30",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "14:30",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "15:00",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "15:10",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "15:20",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:00",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:00",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:10",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:10",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:10",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "16:15",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "16:15",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "17:00",
+      "days": "F",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "17:00",
+      "days": "W",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "17:30",
+      "days": "W",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "17:40",
+      "days": "M",
+      "sectionCount": 8
+    },
+    {
+      "timeSlot": "17:40",
+      "days": "MW",
+      "sectionCount": 8
+    },
+    {
+      "timeSlot": "17:40",
+      "days": "T",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "17:40",
+      "days": "TR",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "17:40",
+      "days": "W",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "F",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "M",
+      "sectionCount": 5
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "R",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "TR",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "18:00",
+      "days": "W",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:05",
+      "days": "MW",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:05",
+      "days": "TR",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:05",
+      "days": "W",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:15",
+      "days": "M",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:15",
+      "days": "MW",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "18:15",
+      "days": "T",
+      "sectionCount": 6
+    },
+    {
+      "timeSlot": "18:30",
+      "days": "M",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:30",
+      "days": "MW",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:30",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "18:35",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:35",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:35",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:35",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:40",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "18:50",
+      "days": "T",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "18:50",
+      "days": "TR",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:50",
+      "days": "W",
+      "sectionCount": 2
+    },
+    {
+      "timeSlot": "18:55",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:55",
+      "days": "T",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "18:55",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "19:30",
+      "days": "TR",
+      "sectionCount": 1
+    },
+    {
+      "timeSlot": "20:20",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "20:20",
+      "days": "W",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "21:10",
+      "days": "M",
+      "sectionCount": 3
+    },
+    {
+      "timeSlot": "21:10",
+      "days": "W",
+      "sectionCount": 3
+    }
+  ],
+  "enrollmentTrends": [
+    {
+      "term": "2237",
+      "department": "Architecture",
+      "totalEnrollment": 750,
+      "sectionCount": 46
+    },
+    {
+      "term": "2237",
+      "department": "Engineering",
+      "totalEnrollment": 617,
+      "sectionCount": 28
+    },
+    {
+      "term": "2237",
+      "department": "General",
+      "totalEnrollment": 77,
+      "sectionCount": 4
+    },
+    {
+      "term": "2237",
+      "department": "Technology",
+      "totalEnrollment": 1334,
+      "sectionCount": 45
+    },
+    {
+      "term": "2247",
+      "department": "Architecture",
+      "totalEnrollment": 836,
+      "sectionCount": 52
+    },
+    {
+      "term": "2247",
+      "department": "Engineering",
+      "totalEnrollment": 624,
+      "sectionCount": 30
+    },
+    {
+      "term": "2247",
+      "department": "General",
+      "totalEnrollment": 148,
+      "sectionCount": 7
+    },
+    {
+      "term": "2247",
+      "department": "Technology",
+      "totalEnrollment": 1331,
+      "sectionCount": 47
+    },
+    {
+      "term": "2257",
+      "department": "Architecture",
+      "totalEnrollment": 826,
+      "sectionCount": 48
+    },
+    {
+      "term": "2257",
+      "department": "Engineering",
+      "totalEnrollment": 567,
+      "sectionCount": 25
+    },
+    {
+      "term": "2257",
+      "department": "General",
+      "totalEnrollment": 233,
+      "sectionCount": 8
+    },
+    {
+      "term": "2257",
+      "department": "Technology",
+      "totalEnrollment": 1402,
+      "sectionCount": 50
+    }
+  ]
+}

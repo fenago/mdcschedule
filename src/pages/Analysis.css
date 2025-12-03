@@ -1,0 +1,128 @@
+.analysis-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analysis-header {
+  margin-bottom: 2rem;
+}
+
+.analysis-header h2 {
+  color: #094579;
+  margin: 0 0 0.5rem 0;
+}
+
+.analysis-subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.analysis-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-section h3 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+}
+
+.chart-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.chart-container {
+  width: 100%;
+}
+
+.custom-tooltip {
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+}
+
+.custom-tooltip p {
+  margin: 0.25rem 0;
+}
+
+.recommendations-section {
+  margin-top: 2rem;
+}
+
+.recommendations-section h3 {
+  color: #094579;
+  margin-bottom: 1.5rem;
+}
+
+.recommendation-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #094579;
+}
+
+.recommendation-card.architecture {
+  border-left-color: #1565c0;
+}
+
+.recommendation-card.technology {
+  border-left-color: #2e7d32;
+}
+
+.recommendation-card.efficiency {
+  border-left-color: #ff9800;
+}
+
+.recommendation-card.capacity {
+  border-left-color: #fd337d;
+}
+
+.recommendation-card h4 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+}
+
+.recommendation-content {
+  color: #555;
+  line-height: 1.6;
+}
+
+.recommendation-content p {
+  margin: 0.5rem 0;
+}
+
+.recommendation-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.recommendation-content li {
+  margin: 0.35rem 0;
+}
+
+.recommendation-content strong {
+  color: #333;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #666;
+}
+
+.error {
+  color: #c62828;
+}

@@ -1,0 +1,199 @@
+.schedule-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.schedule-header h2 {
+  color: #094579;
+  margin: 0;
+}
+
+.schedule-controls {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.control-group select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: white;
+  min-width: 200px;
+}
+
+.room-info {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.room-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #094579;
+}
+
+.room-info p {
+  margin: 0;
+  color: #555;
+}
+
+.room-info strong {
+  color: #333;
+}
+
+.section-count {
+  margin-top: 0.5rem !important;
+  color: #666 !important;
+  font-style: italic;
+}
+
+.schedule-grid-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-grid {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.schedule-grid th {
+  background: #094579;
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.time-header {
+  width: 80px;
+}
+
+.time-cell {
+  background: #f5f5f5;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-cell {
+  border: 1px solid #eee;
+  padding: 0.25rem;
+  height: 60px;
+  vertical-align: top;
+}
+
+.schedule-cell.empty {
+  background: #fafafa;
+}
+
+.schedule-cell.occupied {
+  background: #e3f2fd;
+}
+
+.occupied-continuation {
+  background: #e3f2fd;
+  border: 1px solid #eee;
+}
+
+.class-block {
+  background: #094579;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.class-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.class-component {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.class-enrollment {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.class-time {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-top: auto;
+}
+
+.schedule-legend {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-block {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.legend-block.occupied {
+  background: #094579;
+}
+
+.legend-block.empty {
+  background: #fafafa;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #666;
+}

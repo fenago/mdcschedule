@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "department": "Architecture",
+    "acad_org": 300020,
+    "facility_id": "4101",
+    "capacity": 20,
+    "designation": "Drafting tables"
+  },
+  {
+    "id": 2,
+    "department": "Architecture",
+    "acad_org": 300020,
+    "facility_id": "4107",
+    "capacity": 20,
+    "designation": "Drafting tables"
+  },
+  {
+    "id": 3,
+    "department": "Architecture",
+    "acad_org": 300020,
+    "facility_id": "4108",
+    "capacity": 20,
+    "designation": "Drafting tables"
+  },
+  {
+    "id": 4,
+    "department": "Architecture",
+    "acad_org": 300020,
+    "facility_id": "6301",
+    "capacity": 30,
+    "designation": "Drafting tables with computers"
+  },
+  {
+    "id": 5,
+    "department": "Architecture",
+    "acad_org": 300020,
+    "facility_id": "6360",
+    "capacity": 20,
+    "designation": "Drafting tables"
+  },
+  {
+    "id": 6,
+    "department": "Engineering",
+    "acad_org": 450034,
+    "facility_id": "6302",
+    "capacity": 24,
+    "designation": "Engineering CAD Lab"
+  },
+  {
+    "id": 7,
+    "department": "Engineering",
+    "acad_org": 450034,
+    "facility_id": "6315",
+    "capacity": 24,
+    "designation": "Engineering Computers"
+  },
+  {
+    "id": 8,
+    "department": "Engineering",
+    "acad_org": 450034,
+    "facility_id": "6317",
+    "capacity": 24,
+    "designation": "Engineering Computers"
+  },
+  {
+    "id": 9,
+    "department": "Engineering",
+    "acad_org": 450034,
+    "facility_id": "6359",
+    "capacity": 22,
+    "designation": "Engineering Computers"
+  },
+  {
+    "id": 10,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2128",
+    "capacity": 20,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 11,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2129",
+    "capacity": 20,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 12,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2130",
+    "capacity": 40,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 13,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2132",
+    "capacity": 40,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 14,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2133",
+    "capacity": 40,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 15,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2134",
+    "capacity": 20,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 16,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "2135",
+    "capacity": 45,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 17,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "6348",
+    "capacity": 20,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 18,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "8216",
+    "capacity": 26,
+    "designation": "Networking classroom (with racks)"
+  },
+  {
+    "id": 19,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "8217",
+    "capacity": 22,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 20,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "6355",
+    "capacity": 40,
+    "designation": "Computer Classroom"
+  },
+  {
+    "id": 21,
+    "department": "Technology",
+    "acad_org": 450060,
+    "facility_id": "6332",
+    "capacity": 30,
+    "designation": "Apple Classroom with iMacs"
+  },
+  {
+    "id": 23,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "N108",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 24,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "M238",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 25,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "M232",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 26,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "6217",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 27,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "6246",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 28,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "9103",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 29,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "R251",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 30,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "2111",
+    "capacity": 30,
+    "designation": "Classroom"
+  },
+  {
+    "id": 31,
+    "department": "General",
+    "acad_org": 0,
+    "facility_id": "6212",
+    "capacity": 30,
+    "designation": "Classroom"
+  }
+]

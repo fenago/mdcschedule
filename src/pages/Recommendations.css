@@ -1,0 +1,343 @@
+.recommendations {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.recommendations-header {
+  margin-bottom: 2rem;
+}
+
+.recommendations-header h2 {
+  color: #094579;
+  margin: 0 0 0.5rem 0;
+}
+
+.recommendations-subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.table-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.table-header h3 {
+  color: #094579;
+  margin: 0;
+}
+
+.table-controls {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #094579;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.recommendations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.recommendations-table th,
+.recommendations-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.recommendations-table th {
+  background: #f5f7fa;
+  color: #094579;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.recommendations-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.recommendations-table .course-code {
+  font-weight: 600;
+  color: #094579;
+  white-space: nowrap;
+}
+
+.recommendations-table .course-desc {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendations-table .number {
+  text-align: center;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.recommendations-table .projected {
+  position: relative;
+}
+
+.recommendations-table .change-up {
+  color: #4caf50;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.recommendations-table .change-down {
+  color: #fd337d;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.recommendations-table .positive {
+  color: #4caf50;
+}
+
+.recommendations-table .negative {
+  color: #fd337d;
+}
+
+.recommendations-table .reason {
+  max-width: 250px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.recommendation-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-increase {
+  background: rgba(76, 175, 80, 0.15);
+  color: #2e7d32;
+}
+
+.badge-decrease {
+  background: rgba(253, 51, 125, 0.15);
+  color: #c2185b;
+}
+
+.badge-maintain {
+  background: rgba(9, 69, 121, 0.15);
+  color: #094579;
+}
+
+.row-increase {
+  background: rgba(76, 175, 80, 0.03);
+}
+
+.row-decrease {
+  background: rgba(253, 51, 125, 0.03);
+}
+
+.room-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.room-section h3 {
+  color: #094579;
+  margin: 0 0 1.5rem 0;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.room-card {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #094579;
+}
+
+.room-optimal {
+  border-left-color: #4caf50;
+}
+
+.room-underutilized {
+  border-left-color: #ff9800;
+}
+
+.room-at_capacity {
+  border-left-color: #fd337d;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.room-id {
+  font-weight: 600;
+  color: #094579;
+}
+
+.room-status {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.status-optimal {
+  background: rgba(76, 175, 80, 0.15);
+  color: #2e7d32;
+}
+
+.status-underutilized {
+  background: rgba(255, 152, 0, 0.15);
+  color: #e65100;
+}
+
+.status-at_capacity {
+  background: rgba(253, 51, 125, 0.15);
+  color: #c2185b;
+}
+
+.room-details {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.room-details p {
+  margin: 0.35rem 0;
+}
+
+.room-details strong {
+  color: #333;
+}
+
+.room-reason {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .recommendations {
+    padding: 1rem;
+  }
+
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-controls {
+    width: 100%;
+  }
+
+  .filter-group {
+    flex: 1;
+  }
+
+  .filter-group select {
+    flex: 1;
+  }
+}
