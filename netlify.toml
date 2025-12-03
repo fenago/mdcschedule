@@ -7,6 +7,17 @@
   node_bundler = "esbuild"
   included_files = ["netlify/functions/data/**"]
 
+# Scheduler endpoints - specific redirects must come before wildcard
+[[redirects]]
+  from = "/api/scheduler/generate"
+  to = "/.netlify/functions/scheduler-generate"
+  status = 200
+
+[[redirects]]
+  from = "/api/scheduler/reassign"
+  to = "/.netlify/functions/scheduler-reassign"
+  status = 200
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"

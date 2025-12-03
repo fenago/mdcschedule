@@ -1,5 +1,5 @@
-import facilitiesData from '../data/facilities.json' with { type: 'json' };
-import sectionsData from '../data/sections.json' with { type: 'json' };
+import facilitiesData from './data/facilities.json' with { type: 'json' };
+import sectionsData from './data/sections.json' with { type: 'json' };
 
 export const handler = async (event) => {
   const headers = {
