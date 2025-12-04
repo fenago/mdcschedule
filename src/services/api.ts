@@ -388,8 +388,66 @@ export interface Building6Summary {
   needsFifthRoom: boolean;
 }
 
+// Key Findings types for Building 6 analysis
+export interface DraftingRoomStat {
+  roomId: string;
+  sections: number;
+  capacity: number;
+}
+
+export interface KeyFinding {
+  goal: string;
+  status: 'success' | 'warning' | 'validated' | 'not_needed' | 'ready';
+  verdict: string;
+}
+
+export interface SeatCapacityFinding extends KeyFinding {
+  currentSeats: number;
+  proposedSeats: number;
+  seatDifference: number;
+  currentRooms: number;
+  proposedRooms: number;
+}
+
+export interface ArchitectureOverflowFinding extends KeyFinding {
+  room8217Sections: number;
+  room8217Courses: string[];
+  currentDraftingRooms: number;
+  totalDraftingSections: number;
+  draftingRoomUtilization: DraftingRoomStat[];
+}
+
+export interface TechnologyMigrationFinding extends KeyFinding {
+  sectionsFromBuilding2: number;
+  sectionsFromBuilding8: number;
+  totalSectionsToMove: number;
+  proposedRooms: number;
+  roomCapacity: number;
+  fitAnalysis: {
+    under40: number;
+    over40: number;
+    allFitIn40Seat: boolean;
+  };
+}
+
+export interface CybersecurityMigrationFinding extends KeyFinding {
+  currentRoom: string;
+  currentCapacity: number;
+  sectionsToMove: number;
+  courses: string[];
+  proposedLocation: string;
+}
+
+export interface KeyFindings {
+  seatCapacity: SeatCapacityFinding;
+  architectureOverflow: ArchitectureOverflowFinding;
+  technologyMigration: TechnologyMigrationFinding;
+  cybersecurityMigration: CybersecurityMigrationFinding;
+}
+
 export interface Building6Data {
   summary: Building6Summary;
+  keyFindings: KeyFindings;
   proposedBuilding6: {
     floor1: ProposedFloor;
     floor2: ProposedFloor;

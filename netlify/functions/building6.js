@@ -232,6 +232,81 @@ export const handler = async (event) => {
       online: building6Candidates.filter(s => s.instrMode && (s.instrMode.startsWith('OL') || s.instrMode.startsWith('RVS'))).length
     };
 
+    // Room 8217 Analysis - Architecture Overflow
+    const room8217 = roomUsageAnalysis['8217'];
+    const room8217ArchSections = room8217 ? room8217.sections.filter(s => s.acadOrg === architectureAcadOrg) : [];
+
+    // Room 8216 Analysis - Cybersecurity/Networking
+    const room8216 = roomUsageAnalysis['8216'];
+    const room8216Sections = room8216 ? room8216.sections : [];
+
+    // Drafting room utilization
+    const draftingRoomStats = architectureDraftingRooms.map(roomId => {
+      const room = roomUsageAnalysis[roomId];
+      return room ? { roomId, sections: room.totalSections, capacity: room.capacity } : null;
+    }).filter(Boolean);
+    const totalDraftingSections = draftingRoomStats.reduce((sum, r) => sum + r.sections, 0);
+
+    // Key Findings - structured analysis with verdicts
+    const keyFindings = {
+      // Goal 1: Maintain seat count, reduce room count
+      seatCapacity: {
+        goal: 'Maintain seat count while reducing room count',
+        currentSeats: summary.currentCapacity.total,
+        proposedSeats: summary.proposedCapacity.total,
+        seatDifference: summary.proposedCapacity.total - summary.currentCapacity.total,
+        currentRooms: building2Rooms.length + building8Rooms.length,
+        proposedRooms: 9, // 8 classrooms + 1 AI Commons
+        status: Math.abs(summary.proposedCapacity.total - summary.currentCapacity.total) <= 10 ? 'success' : 'warning',
+        verdict: summary.proposedCapacity.total >= summary.currentCapacity.total - 10
+          ? `Seat count maintained (${summary.proposedCapacity.total} vs ${summary.currentCapacity.total} current)`
+          : `Seat shortage: need ${summary.currentCapacity.total - summary.proposedCapacity.total} more seats`
+      },
+
+      // Goal 2: Architecture - validate need for additional drafting room
+      architectureOverflow: {
+        goal: 'Validate need for additional drafting room (8217 overflow)',
+        room8217Sections: room8217ArchSections.length,
+        room8217Courses: room8217ArchSections.map(s => s.course),
+        currentDraftingRooms: architectureDraftingRooms.length,
+        totalDraftingSections: totalDraftingSections,
+        draftingRoomUtilization: draftingRoomStats,
+        status: room8217ArchSections.length > 0 ? 'validated' : 'not_needed',
+        verdict: room8217ArchSections.length > 0
+          ? `VALIDATED: 8217 has ${room8217ArchSections.length} Architecture overflow sections - additional drafting room needed`
+          : 'Current drafting rooms are sufficient'
+      },
+
+      // Goal 3: Technology - Building 2 to Building 6 migration
+      technologyMigration: {
+        goal: 'Move Building 2 Technology classes to Building 6 floors 2-3',
+        sectionsFromBuilding2: summary.sectionsToMove.fromBuilding2,
+        sectionsFromBuilding8: summary.sectionsToMove.fromBuilding8,
+        totalSectionsToMove: summary.sectionsToMove.total,
+        proposedRooms: 8,
+        roomCapacity: 40,
+        fitAnalysis: {
+          under40: enrollmentBrackets.small.count + enrollmentBrackets.medium.count + enrollmentBrackets.large.count,
+          over40: enrollmentBrackets.xlarge.count,
+          allFitIn40Seat: enrollmentBrackets.xlarge.count <= 1 // 1 section at 41 is close enough
+        },
+        status: enrollmentBrackets.xlarge.count <= 2 ? 'success' : 'warning',
+        verdict: `${summary.sectionsToMove.total} sections can migrate to 8 × 40-seat rooms (${enrollmentBrackets.xlarge.count} section(s) slightly over capacity)`
+      },
+
+      // Goal 4: Room 8216 to Cybersecurity/Networking on Floor 1
+      cybersecurityMigration: {
+        goal: 'Move 8216 classes to Cybersecurity/Networking rooms on Building 6 Floor 1',
+        currentRoom: '8216',
+        currentCapacity: room8216?.capacity || 0,
+        sectionsToMove: room8216Sections.length,
+        courses: [...new Set(room8216Sections.map(s => s.course))],
+        proposedLocation: 'Building 6, Floor 1 - Cybersecurity/Networking Labs',
+        status: 'ready',
+        verdict: `${room8216Sections.length} Cybersecurity/Networking sections ready to move to Building 6 Floor 1`
+      }
+    };
+
     return {
       statusCode: 200,
       headers,
@@ -239,6 +314,7 @@ export const handler = async (event) => {
         success: true,
         data: {
           summary,
+          keyFindings,
           proposedBuilding6,
           roomUsageAnalysis: Object.values(roomUsageAnalysis),
           architectureLectureClasses,

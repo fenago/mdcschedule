@@ -438,6 +438,103 @@
   font-style: italic;
 }
 
+/* Key Findings Section */
+.key-findings-section {
+  margin-bottom: 2rem;
+}
+
+.key-findings-section h3 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.key-findings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.key-finding-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #ccc;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.key-finding-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.key-finding-card.finding-success {
+  border-left-color: #4caf50;
+  background: linear-gradient(to right, rgba(76, 175, 80, 0.05), white);
+}
+
+.key-finding-card.finding-validated {
+  border-left-color: #ff9800;
+  background: linear-gradient(to right, rgba(255, 152, 0, 0.05), white);
+}
+
+.key-finding-card.finding-ready {
+  border-left-color: #2196f3;
+  background: linear-gradient(to right, rgba(33, 150, 243, 0.05), white);
+}
+
+.key-finding-card.finding-warning {
+  border-left-color: #f44336;
+  background: linear-gradient(to right, rgba(244, 67, 54, 0.05), white);
+}
+
+.key-finding-card.finding-neutral {
+  border-left-color: #9e9e9e;
+}
+
+.finding-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.finding-icon {
+  font-size: 1.25rem;
+}
+
+.finding-header h4 {
+  margin: 0;
+  color: #094579;
+  font-size: 1rem;
+}
+
+.finding-goal {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.finding-details {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.finding-verdict {
+  font-size: 0.95rem;
+  color: #094579;
+  font-weight: 600;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
 /* Loading and Error States */
 .loading,
 .error {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getBuilding6Analysis, type Building6Data, type TechnologyClass, type RoomUsageAnalysis } from '../services/api';
+import { getBuilding6Analysis, type Building6Data, type TechnologyClass, type RoomUsageAnalysis, type KeyFindings } from '../services/api';
 import { StatCard } from '../components/StatCard';
 import {
   BarChart,
@@ -93,8 +93,82 @@ export function Building6() {
     );
   };
 
+  const getStatusClass = (status: string) => {
+    switch (status) {
+      case 'success': return 'finding-success';
+      case 'validated': return 'finding-validated';
+      case 'ready': return 'finding-ready';
+      case 'warning': return 'finding-warning';
+      case 'not_needed': return 'finding-neutral';
+      default: return '';
+    }
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'success': return '\u2705';
+      case 'validated': return '\u26A0\uFE0F';
+      case 'ready': return '\u2705';
+      case 'warning': return '\u26A0\uFE0F';
+      case 'not_needed': return '\u2796';
+      default: return '';
+    }
+  };
+
+  const renderKeyFindings = () => {
+    if (!data.keyFindings) return null;
+
+    const findings = [
+      {
+        key: 'seatCapacity',
+        title: 'Goal 1: Seat Capacity',
+        finding: data.keyFindings.seatCapacity,
+        details: `${data.keyFindings.seatCapacity.currentSeats} current → ${data.keyFindings.seatCapacity.proposedSeats} proposed (${data.keyFindings.seatCapacity.seatDifference >= 0 ? '+' : ''}${data.keyFindings.seatCapacity.seatDifference})`
+      },
+      {
+        key: 'architectureOverflow',
+        title: 'Goal 2: Architecture Overflow (8217)',
+        finding: data.keyFindings.architectureOverflow,
+        details: `${data.keyFindings.architectureOverflow.room8217Sections} sections in 8217 need drafting rooms`
+      },
+      {
+        key: 'technologyMigration',
+        title: 'Goal 4: Technology Migration',
+        finding: data.keyFindings.technologyMigration,
+        details: `${data.keyFindings.technologyMigration.totalSectionsToMove} sections → ${data.keyFindings.technologyMigration.proposedRooms} rooms (${data.keyFindings.technologyMigration.fitAnalysis.over40} over 40 students)`
+      },
+      {
+        key: 'cybersecurityMigration',
+        title: 'Goal 5: Cybersecurity/Networking (8216)',
+        finding: data.keyFindings.cybersecurityMigration,
+        details: `${data.keyFindings.cybersecurityMigration.sectionsToMove} sections → Floor 1 Labs`
+      }
+    ];
+
+    return (
+      <div className="key-findings-section">
+        <h3>Key Findings & Verdicts</h3>
+        <div className="key-findings-grid">
+          {findings.map(({ key, title, finding, details }) => (
+            <div key={key} className={`key-finding-card ${getStatusClass(finding.status)}`}>
+              <div className="finding-header">
+                <span className="finding-icon">{getStatusIcon(finding.status)}</span>
+                <h4>{title}</h4>
+              </div>
+              <div className="finding-goal">{finding.goal}</div>
+              <div className="finding-details">{details}</div>
+              <div className="finding-verdict">{finding.verdict}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const renderOverview = () => (
     <>
+      {renderKeyFindings()}
+
       <div className="stats-grid">
         <StatCard
           title="Building 2 Rooms"
