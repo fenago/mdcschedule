@@ -8,7 +8,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   PieChart,
   Pie,
@@ -64,25 +63,6 @@ export function Building6() {
     count: bracket.count,
     fill: key === 'small' ? '#4caf50' : key === 'medium' ? '#6894db' : key === 'large' ? '#ff9800' : '#fd337d',
   }));
-
-  // Prepare capacity comparison chart
-  const capacityComparisonData = [
-    {
-      name: 'Building 2',
-      current: data.summary.currentCapacity.building2,
-      type: 'Current',
-    },
-    {
-      name: 'Building 8',
-      current: data.summary.currentCapacity.building8,
-      type: 'Current',
-    },
-    {
-      name: 'Building 6 (Proposed)',
-      current: data.summary.proposedCapacity.total,
-      type: 'Proposed',
-    },
-  ];
 
   const formatTime = (time: string | null) => {
     if (!time) return 'N/A';
