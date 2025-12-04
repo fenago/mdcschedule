@@ -1070,9 +1070,9 @@ app.get('/api/building6', (req, res) => {
 
     // Instruction mode breakdown for candidates
     const instrModeBreakdown = {
-      inPerson: building6Candidates.filter(s => s.instrMode === 'P').length,
-      blended: building6Candidates.filter(s => s.instrMode === 'BL').length,
-      online: building6Candidates.filter(s => s.instrMode === 'OL' || s.instrMode === 'RVS').length
+      inPerson: building6Candidates.filter(s => s.instrMode && s.instrMode.startsWith('P')).length,
+      blended: building6Candidates.filter(s => s.instrMode && s.instrMode.startsWith('BL')).length,
+      online: building6Candidates.filter(s => s.instrMode && (s.instrMode.startsWith('OL') || s.instrMode.startsWith('RVS'))).length
     };
 
     res.json({
