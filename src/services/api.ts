@@ -276,3 +276,141 @@ export async function getAvailableSlots(
     `scheduler/available-slots?${params.toString()}`
   );
 }
+
+// Building 6 Planning types
+export interface SectionDetail {
+  course: string;
+  description: string;
+  enrollment: number;
+  days: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  instrMode: string;
+  isInDiscipline: boolean;
+  acadOrg: number;
+}
+
+export interface RoomUsageAnalysis {
+  facilityId: string;
+  department: string;
+  capacity: number;
+  designation: string;
+  building: string;
+  totalSections: number;
+  inDisciplineSections: number;
+  overflowSections: number;
+  avgEnrollment: number;
+  maxEnrollment: number;
+  sections: SectionDetail[];
+  isOutlier: boolean;
+  isDraftingRoom: boolean;
+  isBuilding2: boolean;
+  isBuilding8: boolean;
+}
+
+export interface ArchitectureLectureClass {
+  course: string;
+  description: string;
+  currentRoom: string | null;
+  enrollment: number;
+  days: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  instrMode: string;
+  isOurRoom: boolean;
+  roomDepartment: string;
+  roomDesignation: string;
+  building: string;
+}
+
+export interface TechnologyClass {
+  course: string;
+  description: string;
+  currentRoom: string | null;
+  enrollment: number;
+  days: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  instrMode: string;
+  building: string;
+  isBuilding2: boolean;
+  isBuilding8: boolean;
+  isBuilding6: boolean;
+  roomCapacity: number;
+  roomDesignation: string;
+}
+
+export interface EnrollmentBracket {
+  label: string;
+  min: number;
+  max: number;
+  count: number;
+  sections: TechnologyClass[];
+}
+
+export interface ProposedRoom {
+  id: string;
+  capacity: number;
+  designation: string;
+  floor: number;
+}
+
+export interface ProposedFloor {
+  rooms: ProposedRoom[];
+  totalCapacity: number;
+  totalRooms: number;
+  note?: string;
+}
+
+export interface Building6Summary {
+  currentTechnologyRooms: {
+    building2: number;
+    building8: number;
+    building6: number;
+    total: number;
+  };
+  currentCapacity: {
+    building2: number;
+    building8: number;
+    total: number;
+  };
+  proposedCapacity: {
+    floors2and3: number;
+    aiCommons: number;
+    total: number;
+  };
+  sectionsToMove: {
+    fromBuilding2: number;
+    fromBuilding8: number;
+    total: number;
+  };
+  enrollmentDistribution: Record<string, EnrollmentBracket>;
+  needsFifthRoom: boolean;
+}
+
+export interface Building6Data {
+  summary: Building6Summary;
+  proposedBuilding6: {
+    floor1: ProposedFloor;
+    floor2: ProposedFloor;
+    floor3: ProposedFloor;
+  };
+  roomUsageAnalysis: RoomUsageAnalysis[];
+  architectureLectureClasses: ArchitectureLectureClass[];
+  technologyClasses: TechnologyClass[];
+  building6Candidates: TechnologyClass[];
+  instrModeBreakdown: {
+    inPerson: number;
+    blended: number;
+    online: number;
+  };
+  currentRooms: {
+    building2: RoomUsageAnalysis[];
+    building8: RoomUsageAnalysis[];
+  };
+  notes: string[];
+}
+
+export async function getBuilding6Analysis(): Promise<Building6Data> {
+  return fetchApi<Building6Data>('building6');
+}

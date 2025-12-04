@@ -1,0 +1,490 @@
+.building6 {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.building6-header {
+  margin-bottom: 2rem;
+}
+
+.building6-header h2 {
+  color: #094579;
+  margin: 0 0 0.5rem 0;
+}
+
+.building6-subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #094579;
+  background: rgba(9, 69, 121, 0.05);
+}
+
+.tab.active {
+  color: #094579;
+  border-bottom-color: #094579;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+  color: #094579;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.chart-subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+}
+
+/* Proposed Building 6 Layout */
+.proposed-layout {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.proposed-layout h3 {
+  color: #094579;
+  margin: 0 0 1.5rem 0;
+}
+
+.floor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.floor-card {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border-left: 4px solid #094579;
+}
+
+.floor-card h4 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.floor-3 {
+  border-left-color: #4caf50;
+}
+
+.floor-2 {
+  border-left-color: #6894db;
+}
+
+.floor-1 {
+  border-left-color: #ff9800;
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.proposed-room {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.proposed-room.ai-commons {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+  border: 1px solid #ff9800;
+}
+
+.room-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.room-cap {
+  color: #666;
+}
+
+.room-type {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.floor-total {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddd;
+  font-weight: 600;
+  color: #094579;
+  text-align: right;
+}
+
+.floor-note {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #ff9800;
+  font-style: italic;
+}
+
+/* Notes Section */
+.notes-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notes-section h3 {
+  color: #094579;
+  margin: 0 0 1rem 0;
+}
+
+.notes-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.notes-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Tables */
+.table-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.table-header {
+  margin-bottom: 1.5rem;
+}
+
+.table-header h3 {
+  color: #094579;
+  margin: 0 0 0.5rem 0;
+}
+
+.table-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.building6-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.building6-table th,
+.building6-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.building6-table th {
+  background: #f5f7fa;
+  color: #094579;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.building6-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.building6-table .course-code {
+  font-weight: 600;
+  color: #094579;
+  white-space: nowrap;
+}
+
+.building6-table .course-desc {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.building6-table .room-id {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-weight: 500;
+}
+
+.building6-table .number {
+  text-align: center;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.building6-table .time {
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.row-building2 {
+  background: rgba(9, 69, 121, 0.03);
+}
+
+.row-building8 {
+  background: rgba(255, 152, 0, 0.03);
+}
+
+.row-our-room {
+  background: rgba(76, 175, 80, 0.03);
+}
+
+.row-external {
+  background: rgba(253, 51, 125, 0.03);
+}
+
+/* Badges */
+.building-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.building-badge.bldg-2 {
+  background: rgba(9, 69, 121, 0.15);
+  color: #094579;
+}
+
+.building-badge.bldg-8 {
+  background: rgba(255, 152, 0, 0.15);
+  color: #e65100;
+}
+
+.instr-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-inperson {
+  background: rgba(9, 69, 121, 0.15);
+  color: #094579;
+}
+
+.badge-blended {
+  background: rgba(104, 148, 219, 0.2);
+  color: #3a6bb3;
+}
+
+.badge-online {
+  background: rgba(0, 0, 0, 0.08);
+  color: #666;
+}
+
+.ownership-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ownership-badge.our-room {
+  background: rgba(76, 175, 80, 0.15);
+  color: #2e7d32;
+}
+
+.ownership-badge.external {
+  background: rgba(253, 51, 125, 0.15);
+  color: #c2185b;
+}
+
+/* Current Rooms Section */
+.current-rooms-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.current-rooms-section h3 {
+  color: #094579;
+  margin: 0 0 1.5rem 0;
+}
+
+.room-analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.room-analysis-card {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #094579;
+}
+
+.room-analysis-card.building8 {
+  border-left-color: #ff9800;
+}
+
+.room-analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.room-analysis-header .room-id {
+  font-weight: 600;
+  color: #094579;
+}
+
+.room-analysis-header .room-capacity {
+  font-size: 0.85rem;
+  color: #666;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.room-analysis-details {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.room-analysis-details p {
+  margin: 0.35rem 0;
+}
+
+.room-analysis-details strong {
+  color: #333;
+}
+
+.room-note {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.8rem;
+  color: #ff9800;
+  font-style: italic;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .building6 {
+    padding: 1rem;
+  }
+
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+
+  .floor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .building6-table {
+    font-size: 0.8rem;
+  }
+
+  .building6-table th,
+  .building6-table td {
+    padding: 0.5rem;
+  }
+}

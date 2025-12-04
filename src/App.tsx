@@ -7,6 +7,7 @@ import { Schedule } from './pages/Schedule';
 import { Analysis } from './pages/Analysis';
 import { Recommendations } from './pages/Recommendations';
 import { Scheduler } from './pages/Scheduler';
+import { Building6 } from './pages/Building6';
 import { Chat } from './pages/Chat';
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/analysis" element={<Analysis />} />
             <Route path="/recommendations" element={<Recommendations />} />
             <Route path="/scheduler" element={<Scheduler />} />
+            <Route path="/building6" element={<Building6 />} />
             <Route path="/chat" element={<Chat />} />
           </Routes>
         </main>

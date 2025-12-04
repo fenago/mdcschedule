@@ -22,6 +22,9 @@ export function Navigation() {
       <NavLink to="/scheduler" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
         Scheduler
       </NavLink>
+      <NavLink to="/building6" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+        Building 6
+      </NavLink>
       <NavLink to="/chat" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
         AI Chat
       </NavLink>
