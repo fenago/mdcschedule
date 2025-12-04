@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getBuilding6Analysis, type Building6Data, type TechnologyClass, type RoomUsageAnalysis, type KeyFindings } from '../services/api';
+import { getBuilding6Analysis, type Building6Data, type TechnologyClass, type RoomUsageAnalysis } from '../services/api';
 import { StatCard } from '../components/StatCard';
 import {
   BarChart,
