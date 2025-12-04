@@ -240,6 +240,30 @@ export const handler = async (event) => {
     const room8216 = roomUsageAnalysis['8216'];
     const room8216Sections = room8216 ? room8216.sections : [];
 
+    // Engineering Rooms Analysis - Goal 3
+    const engineeringRooms = ['6302', '6315', '6317', '6359'];
+    const engineeringAnalysis = engineeringRooms.map(roomId => {
+      const room = roomUsageAnalysis[roomId];
+      if (!room) return null;
+      const avgEnroll = room.avgEnrollment || 0;
+      const utilizationRate = room.capacity > 0 ? Math.round((avgEnroll / room.capacity) * 100) : 0;
+      return {
+        roomId,
+        capacity: room.capacity,
+        sections: room.totalSections,
+        avgEnrollment: avgEnroll,
+        maxEnrollment: room.maxEnrollment,
+        utilizationRate,
+        isOverCapacity: avgEnroll > room.capacity,
+        courses: [...new Set(room.sections.map(s => s.course))]
+      };
+    }).filter(Boolean);
+
+    const overCapacityRooms = engineeringAnalysis.filter(r => r.isOverCapacity);
+    const highUtilRooms = engineeringAnalysis.filter(r => r.utilizationRate >= 90);
+    const totalEngSections = engineeringAnalysis.reduce((sum, r) => sum + r.sections, 0);
+    const totalEngCapacity = engineeringAnalysis.reduce((sum, r) => sum + r.capacity, 0);
+
     // Drafting room utilization
     const draftingRoomStats = architectureDraftingRooms.map(roomId => {
       const room = roomUsageAnalysis[roomId];
@@ -277,7 +301,22 @@ export const handler = async (event) => {
           : 'Current drafting rooms are sufficient'
       },
 
-      // Goal 3: Technology - Building 2 to Building 6 migration
+      // Goal 3: Engineering classrooms meet enrollment needs
+      engineeringCapacity: {
+        goal: 'Check Engineering classrooms meet enrollment needs',
+        totalRooms: engineeringRooms.length,
+        totalCapacity: totalEngCapacity,
+        totalSections: totalEngSections,
+        overCapacityRooms: overCapacityRooms.length,
+        highUtilizationRooms: highUtilRooms.length,
+        roomAnalysis: engineeringAnalysis,
+        status: overCapacityRooms.length === 0 ? 'success' : 'warning',
+        verdict: overCapacityRooms.length === 0
+          ? `Engineering rooms are right-sized (${engineeringRooms.length} rooms, ${totalEngCapacity} seats, ${highUtilRooms.length} at high utilization)`
+          : `WARNING: ${overCapacityRooms.length} Engineering room(s) over capacity - rooms ${overCapacityRooms.map(r => r.roomId).join(', ')} need larger capacity`
+      },
+
+      // Goal 4: Technology - Building 2 to Building 6 migration
       technologyMigration: {
         goal: 'Move Building 2 Technology classes to Building 6 floors 2-3',
         sectionsFromBuilding2: summary.sectionsToMove.fromBuilding2,
@@ -288,13 +327,13 @@ export const handler = async (event) => {
         fitAnalysis: {
           under40: enrollmentBrackets.small.count + enrollmentBrackets.medium.count + enrollmentBrackets.large.count,
           over40: enrollmentBrackets.xlarge.count,
-          allFitIn40Seat: enrollmentBrackets.xlarge.count <= 1 // 1 section at 41 is close enough
+          allFitIn40Seat: enrollmentBrackets.xlarge.count <= 1
         },
         status: enrollmentBrackets.xlarge.count <= 2 ? 'success' : 'warning',
         verdict: `${summary.sectionsToMove.total} sections can migrate to 8 × 40-seat rooms (${enrollmentBrackets.xlarge.count} section(s) slightly over capacity)`
       },
 
-      // Goal 4: Room 8216 to Cybersecurity/Networking on Floor 1
+      // Goal 5: Room 8216 to Cybersecurity/Networking on Floor 1
       cybersecurityMigration: {
         goal: 'Move 8216 classes to Cybersecurity/Networking rooms on Building 6 Floor 1',
         currentRoom: '8216',
@@ -307,6 +346,115 @@ export const handler = async (event) => {
       }
     };
 
+    // Actionable Options for Decision Makers
+    const actionableOptions = [
+      {
+        id: 'option-a',
+        name: 'Option A: Full Migration (Recommended)',
+        description: 'Complete Building 6 buildout with all proposed rooms',
+        scope: 'All 5 Goals',
+        investment: 'High',
+        timeline: 'Fall 2026',
+        outcomes: [
+          `${summary.proposedCapacity.total} total seats in modern facilities`,
+          `${summary.sectionsToMove.total} Technology sections relocated from Building 2`,
+          `${room8216Sections.length} Cybersecurity sections in dedicated Floor 1 labs`,
+          room8217ArchSections.length > 0 ? 'Additional drafting room addresses Architecture overflow' : 'Architecture needs met',
+          'AI Commons provides flexible 80-seat collaboration space'
+        ],
+        risks: ['Highest capital investment', 'Construction timeline dependencies'],
+        roomConfig: {
+          floor1: 'Cybersecurity/Networking Labs + AI Commons (80 seats)',
+          floor2: '4 × 40-seat computer classrooms (160 seats)',
+          floor3: '4 × 40-seat computer classrooms (160 seats)'
+        },
+        seatsGained: summary.proposedCapacity.total - summary.currentCapacity.total,
+        satisfiesGoals: [1, 2, 3, 4, 5]
+      },
+      {
+        id: 'option-b',
+        name: 'Option B: Technology Focus Only',
+        description: 'Prioritize Building 2 Technology migration, defer other changes',
+        scope: 'Goals 1 & 4',
+        investment: 'Medium-High',
+        timeline: 'Fall 2026',
+        outcomes: [
+          `${summary.sectionsToMove.fromBuilding2} Building 2 sections moved to Building 6`,
+          'Building 2 rooms freed for other departments',
+          '8 new 40-seat computer classrooms'
+        ],
+        risks: ['8216 Cybersecurity remains in Building 8', 'Architecture overflow unaddressed', 'AI Commons delayed'],
+        roomConfig: {
+          floor1: 'Deferred',
+          floor2: '4 × 40-seat computer classrooms',
+          floor3: '4 × 40-seat computer classrooms'
+        },
+        seatsGained: 320 - summary.currentCapacity.building2,
+        satisfiesGoals: [1, 4]
+      },
+      {
+        id: 'option-c',
+        name: 'Option C: Phased Approach',
+        description: 'Phase 1: Floors 2-3 (Fall 2026), Phase 2: Floor 1 (Fall 2027)',
+        scope: 'All Goals, Phased',
+        investment: 'Spread over 2 years',
+        timeline: 'Fall 2026 + Fall 2027',
+        outcomes: [
+          'Phase 1: Technology migration complete',
+          'Phase 2: Cybersecurity labs + AI Commons',
+          'Lower annual budget impact'
+        ],
+        risks: ['Delayed Cybersecurity relocation', 'Two construction disruptions', 'Inflation on Phase 2 costs'],
+        roomConfig: {
+          phase1: 'Floors 2-3: 8 × 40-seat classrooms',
+          phase2: 'Floor 1: Cybersecurity Labs + AI Commons'
+        },
+        seatsGained: summary.proposedCapacity.total - summary.currentCapacity.total,
+        satisfiesGoals: [1, 4, 'then', 2, 3, 5]
+      },
+      {
+        id: 'option-d',
+        name: 'Option D: Minimal Intervention',
+        description: 'Only address critical capacity issues in current buildings',
+        scope: 'Goal 3 only',
+        investment: 'Low',
+        timeline: 'Immediate',
+        outcomes: [
+          'Increase Engineering room capacities where needed',
+          `Address ${overCapacityRooms.length} over-capacity rooms`,
+          'No construction required'
+        ],
+        risks: ['Building 2 aging infrastructure remains', 'No modernization', 'Technology growth constrained'],
+        roomConfig: {
+          changes: 'Furniture/equipment upgrades only',
+          newConstruction: 'None'
+        },
+        seatsGained: 0,
+        satisfiesGoals: [3]
+      },
+      {
+        id: 'option-e',
+        name: 'Option E: Hybrid with Larger Rooms',
+        description: 'Fewer but larger classrooms (50-seat) to maximize flexibility',
+        scope: 'All Goals, Different Config',
+        investment: 'High',
+        timeline: 'Fall 2026',
+        outcomes: [
+          '6 × 50-seat rooms instead of 8 × 40-seat (300 vs 320 seats)',
+          'Better handles enrollment growth',
+          'More flexible for larger sections'
+        ],
+        risks: ['20 fewer seats than Option A', 'Some sections may be too small for 50-seat rooms'],
+        roomConfig: {
+          floor1: 'Cybersecurity Labs + AI Commons (80 seats)',
+          floor2: '3 × 50-seat computer classrooms (150 seats)',
+          floor3: '3 × 50-seat computer classrooms (150 seats)'
+        },
+        seatsGained: (300 + 80) - summary.currentCapacity.total,
+        satisfiesGoals: [1, 2, 3, 4, 5]
+      }
+    ];
+
     return {
       statusCode: 200,
       headers,
@@ -315,12 +463,14 @@ export const handler = async (event) => {
         data: {
           summary,
           keyFindings,
+          actionableOptions,
           proposedBuilding6,
           roomUsageAnalysis: Object.values(roomUsageAnalysis),
           architectureLectureClasses,
           technologyClasses,
           building6Candidates,
           instrModeBreakdown,
+          engineeringAnalysis,
           currentRooms: {
             building2: building2Rooms.map(id => roomUsageAnalysis[id]).filter(Boolean),
             building8: building8Rooms.map(id => roomUsageAnalysis[id]).filter(Boolean)

@@ -438,11 +438,50 @@ export interface CybersecurityMigrationFinding extends KeyFinding {
   proposedLocation: string;
 }
 
+export interface EngineeringRoomAnalysis {
+  roomId: string;
+  capacity: number;
+  sections: number;
+  avgEnrollment: number;
+  maxEnrollment: number;
+  utilizationRate: number;
+  isOverCapacity: boolean;
+  courses: string[];
+}
+
+export interface EngineeringCapacityFinding extends KeyFinding {
+  totalRooms: number;
+  totalCapacity: number;
+  totalSections: number;
+  overCapacityRooms: number;
+  highUtilizationRooms: number;
+  roomAnalysis: EngineeringRoomAnalysis[];
+}
+
+export interface ActionableOption {
+  id: string;
+  name: string;
+  description: string;
+  pros: string[];
+  cons: string[];
+  impact: {
+    architectureGoal: 'fully_met' | 'partially_met' | 'not_addressed';
+    technologyGoal: 'fully_met' | 'partially_met' | 'not_addressed';
+    cybersecurityGoal: 'fully_met' | 'partially_met' | 'not_addressed';
+    engineeringGoal: 'fully_met' | 'partially_met' | 'not_addressed';
+    capacityGoal: 'fully_met' | 'partially_met' | 'not_addressed';
+  };
+  estimatedCost: 'low' | 'medium' | 'high';
+  implementationTime: 'immediate' | 'short_term' | 'long_term';
+  recommendation: 'recommended' | 'alternative' | 'not_recommended';
+}
+
 export interface KeyFindings {
   seatCapacity: SeatCapacityFinding;
   architectureOverflow: ArchitectureOverflowFinding;
   technologyMigration: TechnologyMigrationFinding;
   cybersecurityMigration: CybersecurityMigrationFinding;
+  engineeringCapacity: EngineeringCapacityFinding;
 }
 
 export interface Building6Data {
@@ -467,6 +506,8 @@ export interface Building6Data {
     building8: RoomUsageAnalysis[];
   };
   notes: string[];
+  actionableOptions: ActionableOption[];
+  engineeringAnalysis: EngineeringRoomAnalysis[];
 }
 
 export async function getBuilding6Analysis(): Promise<Building6Data> {

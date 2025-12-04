@@ -19,7 +19,7 @@ export function Building6() {
   const [data, setData] = useState<Building6Data | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'overview' | 'candidates' | 'rooms' | 'architecture'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'candidates' | 'rooms' | 'architecture' | 'insights'>('overview');
 
   useEffect(() => {
     async function fetchData() {
@@ -130,6 +130,12 @@ export function Building6() {
         title: 'Goal 2: Architecture Overflow (8217)',
         finding: data.keyFindings.architectureOverflow,
         details: `${data.keyFindings.architectureOverflow.room8217Sections} sections in 8217 need drafting rooms`
+      },
+      {
+        key: 'engineeringCapacity',
+        title: 'Goal 3: Engineering Rooms',
+        finding: data.keyFindings.engineeringCapacity,
+        details: `${data.keyFindings.engineeringCapacity.totalRooms} rooms, ${data.keyFindings.engineeringCapacity.totalSections} sections (${data.keyFindings.engineeringCapacity.overCapacityRooms} over capacity)`
       },
       {
         key: 'technologyMigration',
@@ -453,6 +459,147 @@ export function Building6() {
     </div>
   );
 
+  const getImpactBadge = (impact: 'fully_met' | 'partially_met' | 'not_addressed') => {
+    const classes: Record<string, string> = {
+      fully_met: 'impact-full',
+      partially_met: 'impact-partial',
+      not_addressed: 'impact-none',
+    };
+    const labels: Record<string, string> = {
+      fully_met: 'Fully Met',
+      partially_met: 'Partial',
+      not_addressed: 'Not Addressed',
+    };
+    return <span className={`impact-badge ${classes[impact]}`}>{labels[impact]}</span>;
+  };
+
+  const getCostBadge = (cost: 'low' | 'medium' | 'high') => {
+    const classes: Record<string, string> = {
+      low: 'cost-low',
+      medium: 'cost-medium',
+      high: 'cost-high',
+    };
+    return <span className={`cost-badge ${classes[cost]}`}>{cost.charAt(0).toUpperCase() + cost.slice(1)}</span>;
+  };
+
+  const getTimeBadge = (time: 'immediate' | 'short_term' | 'long_term') => {
+    const labels: Record<string, string> = {
+      immediate: 'Immediate',
+      short_term: 'Short Term',
+      long_term: 'Long Term',
+    };
+    return <span className="time-badge">{labels[time]}</span>;
+  };
+
+  const renderActionableInsights = () => {
+    if (!data.actionableOptions || data.actionableOptions.length === 0) {
+      return <div className="loading">No actionable options available</div>;
+    }
+
+    return (
+      <div className="insights-section">
+        <div className="insights-header">
+          <h3>Actionable Insights for Decision Makers</h3>
+          <p className="insights-subtitle">
+            Five strategic options for Building 6 planning, each with clear outcomes and trade-offs
+          </p>
+        </div>
+
+        <div className="options-grid">
+          {data.actionableOptions.map((option) => (
+            <div
+              key={option.id}
+              className={`option-card ${option.recommendation === 'recommended' ? 'option-recommended' : option.recommendation === 'alternative' ? 'option-alternative' : 'option-not-recommended'}`}
+            >
+              <div className="option-header">
+                <div className="option-id">{option.id}</div>
+                <h4 className="option-name">{option.name}</h4>
+                {option.recommendation === 'recommended' && (
+                  <span className="recommendation-badge recommended">Recommended</span>
+                )}
+                {option.recommendation === 'alternative' && (
+                  <span className="recommendation-badge alternative">Alternative</span>
+                )}
+                {option.recommendation === 'not_recommended' && (
+                  <span className="recommendation-badge not-recommended">Not Recommended</span>
+                )}
+              </div>
+
+              <p className="option-description">{option.description}</p>
+
+              <div className="option-meta">
+                <div className="meta-item">
+                  <span className="meta-label">Cost:</span>
+                  {getCostBadge(option.estimatedCost)}
+                </div>
+                <div className="meta-item">
+                  <span className="meta-label">Timeline:</span>
+                  {getTimeBadge(option.implementationTime)}
+                </div>
+              </div>
+
+              <div className="option-impact">
+                <h5>Goal Impact</h5>
+                <div className="impact-grid">
+                  <div className="impact-item">
+                    <span className="impact-label">1. Capacity</span>
+                    {getImpactBadge(option.impact.capacityGoal)}
+                  </div>
+                  <div className="impact-item">
+                    <span className="impact-label">2. Architecture</span>
+                    {getImpactBadge(option.impact.architectureGoal)}
+                  </div>
+                  <div className="impact-item">
+                    <span className="impact-label">3. Engineering</span>
+                    {getImpactBadge(option.impact.engineeringGoal)}
+                  </div>
+                  <div className="impact-item">
+                    <span className="impact-label">4. Technology</span>
+                    {getImpactBadge(option.impact.technologyGoal)}
+                  </div>
+                  <div className="impact-item">
+                    <span className="impact-label">5. Cybersecurity</span>
+                    {getImpactBadge(option.impact.cybersecurityGoal)}
+                  </div>
+                </div>
+              </div>
+
+              <div className="option-pros-cons">
+                <div className="pros">
+                  <h5>Pros</h5>
+                  <ul>
+                    {option.pros.map((pro, i) => (
+                      <li key={i}>{pro}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="cons">
+                  <h5>Cons</h5>
+                  <ul>
+                    {option.cons.map((con, i) => (
+                      <li key={i}>{con}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="insights-summary">
+          <h4>Summary</h4>
+          <p>
+            Option A (Full Migration) provides the most comprehensive solution, addressing all five goals.
+            Option B focuses specifically on Technology needs if Architecture/Engineering are not priorities.
+            Option C offers a phased approach for budget-conscious implementation.
+            Option D provides minimal intervention if Building 6 plans are uncertain.
+            Option E offers a hybrid approach with larger room capacities.
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="building6">
       <div className="building6-header">
@@ -487,6 +634,12 @@ export function Building6() {
         >
           Architecture ({data.architectureLectureClasses.length})
         </button>
+        <button
+          className={`tab ${activeTab === 'insights' ? 'active' : ''}`}
+          onClick={() => setActiveTab('insights')}
+        >
+          Actionable Insights
+        </button>
       </div>
 
       <div className="tab-content">
@@ -494,6 +647,7 @@ export function Building6() {
         {activeTab === 'candidates' && renderCandidates()}
         {activeTab === 'rooms' && renderRooms()}
         {activeTab === 'architecture' && renderArchitecture()}
+        {activeTab === 'insights' && renderActionableInsights()}
       </div>
     </div>
   );
