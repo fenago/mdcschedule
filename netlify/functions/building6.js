@@ -346,112 +346,146 @@ export const handler = async (event) => {
       }
     };
 
-    // Actionable Options for Decision Makers
+    // Actionable Options for Decision Makers (matching TypeScript interface)
     const actionableOptions = [
       {
-        id: 'option-a',
-        name: 'Option A: Full Migration (Recommended)',
-        description: 'Complete Building 6 buildout with all proposed rooms',
-        scope: 'All 5 Goals',
-        investment: 'High',
-        timeline: 'Fall 2026',
-        outcomes: [
+        id: 'A',
+        name: 'Full Migration',
+        description: 'Complete Building 6 buildout with all proposed rooms. Maximum investment for maximum flexibility and modernization.',
+        pros: [
           `${summary.proposedCapacity.total} total seats in modern facilities`,
           `${summary.sectionsToMove.total} Technology sections relocated from Building 2`,
           `${room8216Sections.length} Cybersecurity sections in dedicated Floor 1 labs`,
           room8217ArchSections.length > 0 ? 'Additional drafting room addresses Architecture overflow' : 'Architecture needs met',
-          'AI Commons provides flexible 80-seat collaboration space'
+          'AI Commons provides flexible collaboration space',
+          'All departments benefit simultaneously'
         ],
-        risks: ['Highest capital investment', 'Construction timeline dependencies'],
-        roomConfig: {
-          floor1: 'Cybersecurity/Networking Labs + AI Commons (80 seats)',
-          floor2: '4 × 40-seat computer classrooms (160 seats)',
-          floor3: '4 × 40-seat computer classrooms (160 seats)'
+        cons: [
+          'Highest capital investment required',
+          'Construction timeline dependencies',
+          'Disruption during transition period'
+        ],
+        impact: {
+          capacityGoal: 'fully_met',
+          architectureGoal: 'fully_met',
+          engineeringGoal: 'fully_met',
+          technologyGoal: 'fully_met',
+          cybersecurityGoal: 'fully_met'
         },
-        seatsGained: summary.proposedCapacity.total - summary.currentCapacity.total,
-        satisfiesGoals: [1, 2, 3, 4, 5]
+        estimatedCost: 'high',
+        implementationTime: 'long_term',
+        recommendation: 'recommended'
       },
       {
-        id: 'option-b',
-        name: 'Option B: Technology Focus Only',
-        description: 'Prioritize Building 2 Technology migration, defer other changes',
-        scope: 'Goals 1 & 4',
-        investment: 'Medium-High',
-        timeline: 'Fall 2026',
-        outcomes: [
+        id: 'B',
+        name: 'Technology Focus Only',
+        description: 'Prioritize Building 2 Technology migration to Building 6 floors 2-3, defer other changes.',
+        pros: [
           `${summary.sectionsToMove.fromBuilding2} Building 2 sections moved to Building 6`,
           'Building 2 rooms freed for other departments',
-          '8 new 40-seat computer classrooms'
+          '8 new 40-seat computer classrooms',
+          'Lower initial investment than full migration'
         ],
-        risks: ['8216 Cybersecurity remains in Building 8', 'Architecture overflow unaddressed', 'AI Commons delayed'],
-        roomConfig: {
-          floor1: 'Deferred',
-          floor2: '4 × 40-seat computer classrooms',
-          floor3: '4 × 40-seat computer classrooms'
+        cons: [
+          '8216 Cybersecurity remains in Building 8',
+          'Architecture overflow unaddressed',
+          'AI Commons delayed',
+          'May require future construction for remaining goals'
+        ],
+        impact: {
+          capacityGoal: 'fully_met',
+          architectureGoal: 'not_addressed',
+          engineeringGoal: 'not_addressed',
+          technologyGoal: 'fully_met',
+          cybersecurityGoal: 'not_addressed'
         },
-        seatsGained: 320 - summary.currentCapacity.building2,
-        satisfiesGoals: [1, 4]
+        estimatedCost: 'medium',
+        implementationTime: 'long_term',
+        recommendation: 'alternative'
       },
       {
-        id: 'option-c',
-        name: 'Option C: Phased Approach',
-        description: 'Phase 1: Floors 2-3 (Fall 2026), Phase 2: Floor 1 (Fall 2027)',
-        scope: 'All Goals, Phased',
-        investment: 'Spread over 2 years',
-        timeline: 'Fall 2026 + Fall 2027',
-        outcomes: [
+        id: 'C',
+        name: 'Phased Approach',
+        description: 'Phase 1: Floors 2-3 (Fall 2026), Phase 2: Floor 1 (Fall 2027). Spreads investment over two years.',
+        pros: [
           'Phase 1: Technology migration complete',
           'Phase 2: Cybersecurity labs + AI Commons',
-          'Lower annual budget impact'
+          'Lower annual budget impact',
+          'Allows adjustment between phases'
         ],
-        risks: ['Delayed Cybersecurity relocation', 'Two construction disruptions', 'Inflation on Phase 2 costs'],
-        roomConfig: {
-          phase1: 'Floors 2-3: 8 × 40-seat classrooms',
-          phase2: 'Floor 1: Cybersecurity Labs + AI Commons'
+        cons: [
+          'Delayed Cybersecurity relocation',
+          'Two construction disruptions',
+          'Potential inflation on Phase 2 costs',
+          'Extended timeline for full benefits'
+        ],
+        impact: {
+          capacityGoal: 'fully_met',
+          architectureGoal: 'partially_met',
+          engineeringGoal: 'partially_met',
+          technologyGoal: 'fully_met',
+          cybersecurityGoal: 'partially_met'
         },
-        seatsGained: summary.proposedCapacity.total - summary.currentCapacity.total,
-        satisfiesGoals: [1, 4, 'then', 2, 3, 5]
+        estimatedCost: 'medium',
+        implementationTime: 'long_term',
+        recommendation: 'alternative'
       },
       {
-        id: 'option-d',
-        name: 'Option D: Minimal Intervention',
-        description: 'Only address critical capacity issues in current buildings',
-        scope: 'Goal 3 only',
-        investment: 'Low',
-        timeline: 'Immediate',
-        outcomes: [
-          'Increase Engineering room capacities where needed',
-          `Address ${overCapacityRooms.length} over-capacity rooms`,
-          'No construction required'
+        id: 'D',
+        name: 'Minimal Intervention',
+        description: 'Only address critical capacity issues in current buildings. Equipment and furniture upgrades only.',
+        pros: [
+          'Lowest cost option',
+          'Immediate implementation possible',
+          `Address ${overCapacityRooms.length} over-capacity Engineering rooms`,
+          'No construction required',
+          'Minimal disruption'
         ],
-        risks: ['Building 2 aging infrastructure remains', 'No modernization', 'Technology growth constrained'],
-        roomConfig: {
-          changes: 'Furniture/equipment upgrades only',
-          newConstruction: 'None'
+        cons: [
+          'Building 2 aging infrastructure remains',
+          'No modernization of facilities',
+          'Technology growth constrained',
+          'Does not address long-term needs',
+          'Most goals remain unaddressed'
+        ],
+        impact: {
+          capacityGoal: 'not_addressed',
+          architectureGoal: 'not_addressed',
+          engineeringGoal: 'partially_met',
+          technologyGoal: 'not_addressed',
+          cybersecurityGoal: 'not_addressed'
         },
-        seatsGained: 0,
-        satisfiesGoals: [3]
+        estimatedCost: 'low',
+        implementationTime: 'immediate',
+        recommendation: 'not_recommended'
       },
       {
-        id: 'option-e',
-        name: 'Option E: Hybrid with Larger Rooms',
-        description: 'Fewer but larger classrooms (50-seat) to maximize flexibility',
-        scope: 'All Goals, Different Config',
-        investment: 'High',
-        timeline: 'Fall 2026',
-        outcomes: [
-          '6 × 50-seat rooms instead of 8 × 40-seat (300 vs 320 seats)',
+        id: 'E',
+        name: 'Hybrid - Larger Rooms',
+        description: 'Fewer but larger classrooms (50-seat) to maximize flexibility. 6 rooms instead of 8.',
+        pros: [
           'Better handles enrollment growth',
-          'More flexible for larger sections'
+          'More flexible for larger sections',
+          'All goals addressed',
+          'Fewer rooms to maintain',
+          'Future-proofed for growth'
         ],
-        risks: ['20 fewer seats than Option A', 'Some sections may be too small for 50-seat rooms'],
-        roomConfig: {
-          floor1: 'Cybersecurity Labs + AI Commons (80 seats)',
-          floor2: '3 × 50-seat computer classrooms (150 seats)',
-          floor3: '3 × 50-seat computer classrooms (150 seats)'
+        cons: [
+          '20 fewer total seats than Option A',
+          'Some sections may be too small for 50-seat rooms',
+          'Higher per-room cost',
+          'Less scheduling flexibility with fewer rooms'
+        ],
+        impact: {
+          capacityGoal: 'partially_met',
+          architectureGoal: 'fully_met',
+          engineeringGoal: 'fully_met',
+          technologyGoal: 'fully_met',
+          cybersecurityGoal: 'fully_met'
         },
-        seatsGained: (300 + 80) - summary.currentCapacity.total,
-        satisfiesGoals: [1, 2, 3, 4, 5]
+        estimatedCost: 'high',
+        implementationTime: 'long_term',
+        recommendation: 'alternative'
       }
     ];
 
